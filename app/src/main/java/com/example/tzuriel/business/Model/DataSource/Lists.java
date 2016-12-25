@@ -71,7 +71,7 @@ public class Lists implements DataBaseInterface {
     }
 
     @Override
-    public boolean is_mail_exsist(String mail) {
+    public boolean is_user_mail_exsist(String mail) {
         for (User user : users_list) {
             if (user.getMail().equals(mail)) {
                 return true;

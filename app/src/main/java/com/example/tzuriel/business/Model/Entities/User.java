@@ -33,9 +33,11 @@ import java.util.ArrayList;
 
        public int get_userId(){return userId;}
 
+
         private String mail;
         private String password;
         private int userId;
 
 
-}
+
+    }

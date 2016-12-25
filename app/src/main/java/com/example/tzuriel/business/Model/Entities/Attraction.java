@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 
     public class Attraction implements Serializable {
-        int business_id;
 
         public Attraction(int business_id, String name, double cost, String description, AttractionTypes type, String country, String begin_date, String end_date) {
             this.businessId = business_id;
@@ -22,7 +21,7 @@ import java.io.Serializable;
         }
 
         public int getBusinessId() {
-            return business_id;
+            return businessId;
         }
 
 
@@ -91,6 +90,7 @@ import java.io.Serializable;
             if ((parts[0].length()^ parts[1].length())==2 ^ parts[2].length()==4^ )
         }
         */
+        int businessId;
         String name;
         double cost;
         String country;
@@ -98,6 +98,6 @@ import java.io.Serializable;
         String end_date;
         String description;
         AttractionTypes type;
-        int businessId;
+
 
 }

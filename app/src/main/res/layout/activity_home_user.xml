@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Controler.homeUserActivity">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:text="Choose business"
+        android:id="@+id/Choose_business_Button"
+         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:text="Add business"
+        android:id="@+id/add_business_button"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:text="Update User Details"
+        android:id="@+id/update_details_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

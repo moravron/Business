@@ -34,7 +34,7 @@ public interface DataBaseInterface {
 
 
     public User validate_and_get_user(String mail,String password);
-    public boolean is_mail_exsist(String mail);
+    public boolean is_user_mail_exsist(String mail);
    // public void check_new_business_activity();
 
 
