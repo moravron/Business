@@ -6,7 +6,11 @@ import com.example.tzuriel.business.Model.BackEnd.Content_Provider;
 import com.example.tzuriel.business.Model.BackEnd.DataBaseInterface;
 import com.example.tzuriel.business.Model.Entities.*;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by tzuriel on 18/12/2016.
@@ -33,7 +37,7 @@ public class Lists implements DataBaseInterface {
     }
 
     @Override
-    public void add_attraction(ContentValues contentAttraction) {
+    public void add_attractions(ContentValues contentAttraction) {
         AttractionTypes type=AttractionTypes.valueOf(contentAttraction.getAsString("Type"));
 
         Attraction attraction = new Attraction(contentAttraction.getAsInteger("businessId"),contentAttraction.getAsString("Name"),contentAttraction.getAsDouble("Cost"),contentAttraction.getAsString("Description"),type,contentAttraction.getAsString("Country"),contentAttraction.getAsString("BeginDate"),contentAttraction.getAsString("EndDate"));
@@ -125,6 +129,10 @@ public class Lists implements DataBaseInterface {
         }
         return tmp;
     }
+
+
+
+
 }
 
 

@@ -15,6 +15,8 @@ import com.example.tzuriel.business.R;
 
 public class SignUpActivity extends AppCompatActivity {
 public static int UserGlobalId;
+public static int BusinessGlobalId;
+
     DataBaseInterface instance = new BackEndFactory().getInstance();
 
 

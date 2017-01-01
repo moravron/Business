@@ -6,8 +6,8 @@ import java.io.Serializable;
  * Created by tzuriel on 18/12/2016.
  */
 public class Business implements Serializable {
-    public Business(int id, String company_name, String address, String mail, String phone_number, int userId) {
-        this.id = id;
+    public Business(int businessId, String company_name, String address, String mail, String phone_number, int userId) {
+        this.businessId = businessId;
         this.company_name = company_name;
         this.mail = mail;
         this.address = address;
@@ -51,7 +51,7 @@ public class Business implements Serializable {
 
 
     public int getId() {
-        return id;
+        return businessId;
     }
 
 
@@ -60,7 +60,7 @@ public class Business implements Serializable {
     }
 
 
-    private int id;
+    private int businessId;
     private String company_name;
     private String mail;
     private String address;

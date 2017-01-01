@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".Controler.homeUserActivity" />
         <activity android:name=".Controler.ChooseBusinessActivity" />
-        <activity android:name=".Controler.SignUpActivity"></activity>
+        <activity android:name=".Controler.SignUpActivity" />
+        <activity android:name=".Controler.AddBusinessActivity"></activity>
     </application>
 
 </manifest>

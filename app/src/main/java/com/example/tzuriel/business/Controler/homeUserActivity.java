@@ -45,8 +45,8 @@ public class homeUserActivity extends AppCompatActivity {
         findViewById(R.id.add_business_button).setOnClickListener(new View.OnClickListener() {
                                                                       @Override
                                                                       public void onClick(View view) {
-                                                                          Intent choose_business = new Intent(homeUserActivity.this, ChooseBusinessActivity.class);
-                                                                          startActivity(choose_business);//update when
+                                                                          Intent activity_add_business = new Intent(homeUserActivity.this, AddBusinessActivity.class);
+                                                                          startActivity(activity_add_business);//update when
                                                                       }
 
                                                                   }

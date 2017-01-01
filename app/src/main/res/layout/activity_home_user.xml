@@ -15,7 +15,7 @@
         android:layout_height="180dp"
         android:text="Choose business"
         android:id="@+id/Choose_business_Button"
-         />
+        android:background="#181f7c" />
 
     <Button
         android:layout_width="match_parent"
@@ -24,7 +24,8 @@
         android:id="@+id/add_business_button"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#4049f6" />
 
     <Button
         android:layout_width="match_parent"
@@ -33,5 +34,6 @@
         android:id="@+id/update_details_button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="#6280ef" />
 </RelativeLayout>

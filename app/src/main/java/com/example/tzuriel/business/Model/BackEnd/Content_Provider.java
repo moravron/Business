@@ -13,7 +13,10 @@ import com.example.tzuriel.business.Model.Entities.Attraction;
 import com.example.tzuriel.business.Model.Entities.Business;
 import com.example.tzuriel.business.Model.Entities.User;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.sql.DataSource;
 
@@ -43,7 +46,7 @@ import javax.sql.DataSource;
             switch (uriCode) {
                 case 1: // users
                     ArrayList<User> users = instance.getAllUsers();
-                    MatrixCursor userMatrix = new MatrixCursor(new String[] { "mail", "password","idUser"});
+                    MatrixCursor userMatrix = new MatrixCursor(new String[] { "userId","Mail", "Password"});
                     for ( User user : users) {
                         userMatrix.addRow(new Object[]{ user.getMail(), user.getPassword(),user.get_userId()});
                     }
@@ -55,7 +58,7 @@ import javax.sql.DataSource;
                     ArrayList<Business> businesses = instance.getAllBusiness();
                     //        Business business = new Business(contentBusiness.getAsInteger("ID"), contentBusiness.getAsString("CompanyName"), contentBusiness.getAsString("Address"), contentBusiness.getAsString("Mail"), contentBusiness.getAsString("PhoneNumber"), contentBusiness.getAsInteger("UserId"));
 
-                    MatrixCursor businessMatrix = new MatrixCursor(new String[]{"ID", "CompanyName", "Address","PhoneNumber", "UserID"});
+                    MatrixCursor businessMatrix = new MatrixCursor(new String[]{"BusinessId", "UserId", "CompanyName","Mail", "Address","PhoneNumber"});
                     for (Business business : businesses) {
                         businessMatrix.addRow(new Object[]{business.getId(), business.getCompany_name(), business.getAddress(), business.getPhone_number(), business.getUserId()});
                     }
@@ -64,7 +67,7 @@ import javax.sql.DataSource;
 
                 case 3: // attraction
                     ArrayList<Attraction> attractions = instance.getAllAttractions();
-                    MatrixCursor AttractionMatrix = new MatrixCursor(new String[] {"BusinessId", "Name", "Cost", "Description", "Type", "Country","BeginDate","EndDate"});
+                    MatrixCursor AttractionMatrix = new MatrixCursor(new String[] {"BusinessId", "AttractionName", "cost", "AttractionType", "country","beginDate","endDate", "Description"});
                     for ( Attraction attraction : instance.getAllAttractions()) {
                         AttractionMatrix.addRow(new Object[]{attraction.getBusinessId(),attraction.getName(),attraction.getCost(),attraction.getDescription(),attraction.getType(),attraction.getCuntry(),attraction.getBegin_date(),attraction.getEnd_date()});
                     }
@@ -99,7 +102,7 @@ import javax.sql.DataSource;
                     instance.add_business(values);
                     return null;
                 case 3:
-                    instance.add_attraction(values);
+                    instance.add_attractions(values);
                     return null;
                 default:
                     throw new IllegalArgumentException("invalid query, no such path.");
@@ -118,8 +121,10 @@ import javax.sql.DataSource;
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         return 0;
     }
-}
 
+
+
+}
 
 
 

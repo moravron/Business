@@ -17,7 +17,7 @@ public interface DataBaseInterface {
 
     public void add_user(ContentValues contentProvider);
     public void add_business(ContentValues contentProvider);
-    public void add_attraction(ContentValues contentProvider);
+    public void add_attractions(ContentValues contentProvider);
 
     public void delete_business(int businessId);
     public void delete_attraction(int attractionId);
